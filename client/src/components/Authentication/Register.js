@@ -51,7 +51,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "http://localhost:5000/api/user",
         {
           name,
           email,
@@ -100,9 +100,9 @@ const Signup = () => {
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("upload_preset", "insta-clone");
+      data.append("cloud_name", "hydra123");
+      fetch("https://api.cloudinary.com/v1_1/hydra123/image/upload", {
         method: "post",
         body: data,
       })
