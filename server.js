@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000;
 const connectDB = require("./config/db");
 const userRoute = require("./routes/userRoute");
 const { errorHandler, notFound } = require("./middlewares/errorMiddleware");
+const chatRoutes = require("./routes/chatRoutes");
 
 // Db connected
 connectDB();
@@ -17,6 +18,8 @@ app.use(cors());
 
 //routes
 app.use("/api/user", userRoute);
+app.use("/api/chat", chatRoutes);
+// app.use("/api/message", messageRoutes);
 
 // errors middlewares
 app.use(errorHandler);
