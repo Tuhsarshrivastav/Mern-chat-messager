@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -12,8 +11,9 @@ import {
 import { useEffect } from "react";
 import { useHistory } from "react-router";
 import Login from "../components/Authentication/Login";
-import Signup from "../components/Authentication/Register";
-const HomeScreen = () => {
+import Signup from "../components/Authentication/Signup";
+
+function Homepage() {
   const history = useHistory();
 
   useEffect(() => {
@@ -56,6 +56,6 @@ const HomeScreen = () => {
       </Box>
     </Container>
   );
-};
+}
 
-export default HomeScreen;
+export default Homepage;
